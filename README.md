@@ -13,6 +13,8 @@ speeds on the paved block portion of the scene. Once a the player collides
 with an enemy, the game is reset and the player moves back to the start 
 square.Once the player reaches the water the game is won.
 
+To check the [**demo**](https://sailajareact.github.io/Fend-Classic-Arcade-Game/) here
+
 ## Libraries and scripting languages used:
 Javascript, ES5, CSS and HTML Canvas
 
