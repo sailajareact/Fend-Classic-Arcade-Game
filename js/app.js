@@ -37,10 +37,9 @@ Enemy.prototype.update = function(dt) {
     player.y < this.y + 50 &&
     player.y + 50 > this.y
   ) {
-    console.log(`player x: ${player.x} y: ${player.y}
-             enemy:: x: ${this.x} y: ${this.x}`);
-    player.x = 200;
-    player.y = 380;
+    player.reset();
+    // player.x = 200;
+    // player.y = 380;
   }
 };
 
@@ -76,8 +75,9 @@ Player.prototype.update = function() {
   if (this.y < 0) {
     alert("YOU REACHED THE WATER, CONGRATULATIONS!");
     document.location.reload();
-    this.x = 200;
-    this.y = 380;
+    player.reset();
+    // this.x = 200;
+    // this.y = 380;
   }
 };
 
@@ -101,6 +101,11 @@ Player.prototype.handleInput = function(keyPress) {
       break;
   }
 };
+
+Player.prototype.reset = function(){
+  this.x = 200;
+    this.y = 380;
+}
 
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
