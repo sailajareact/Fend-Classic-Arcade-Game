@@ -18,6 +18,12 @@ To check the [**demo**](https://sailajareact.github.io/Fend-Classic-Arcade-Game/
 ## Libraries and scripting languages used:
 Javascript, ES5, CSS and HTML Canvas
 
+## How to run project locally:
+1. clone this project
+git clone [**repo**](https://github.com/sailajareact/Fend-Classic-Arcade-Game.git)
+to your local machine
+2. serve index.html file in the browser 
+
 ## Planning:
 * Creating canvas element and bringing the 2d context of that
 * Drawing the canvas with the ground images, player and enemies
