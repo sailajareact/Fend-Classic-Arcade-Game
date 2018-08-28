@@ -1,14 +1,22 @@
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
-    // Variables applied to each of our instances go here,
+    // Variables applied to each of our instances,
     this.x = x, //x position
     this.y = y, //y position
     this.speed = speed, //bugs speed
-    // we've provided one for you to get started
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
 };
+
+// check for collistion of enemy and player if it happens send player to his start point
+// considering enemy(bug's 60x50) width 60 and height 50 based on this
+// check the player position in x is in between the enemy's width or touching that
+//1. check either the player.x < enemy.x + 60 and
+// 2. check the player.x + 50 > enemy.y and
+// check the player position in y is in between the enemy's height or touching that
+// 3. check player.y < enemy.y + 50
+// 4. check player.y + 40 > enemy.y
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
@@ -40,7 +48,6 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-// Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
 var Player =  function(x, y, speed){
@@ -94,16 +101,6 @@ Player.prototype.handleInput = function(keyPress){
     }
 }
 
-// check for collistion of enemy and player if it happens send player to his start point
-// considering enemy(bug's 60x50) width 60 and height 50 based on this
-// check the player position in x is in between the enemy's width or touching that
-//1. check either the player.x < enemy.x + 60 and
-// 2. check the player.x + 50 > enemy.y and
-// check the player position in y is in between the enemy's height or touching that
-// 3. check player.y < enemy.y + 50
-// 4. check player.y + 40 > enemy.y
-
-// Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 var allEnemies = [],
